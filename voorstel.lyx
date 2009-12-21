@@ -1,0 +1,454 @@
+#LyX 1.6.4.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language dutch
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue, citecolor=blue, urlcolor=blue, filecolor=blue, pdftex"
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Semantiek bij procesanalyse
+\end_layout
+
+\begin_layout Author
+Kris Van den Bergh
+\begin_inset Newline newline
+\end_inset
+
+December 2009
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Thesis voorstel voor het behalen van de graad van:
+\begin_inset Newline newline
+\end_inset
+
+Handelsingenieur in de Beleidsinformatica: informatie technologie
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename afbeeldingen/logo_UA.tiff
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Academisch jaar 2009 -- 2010
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Inleiding
+\end_layout
+
+\begin_layout Standard
+Organisaties moeten flexibel en wendbaar zijn om te overleven in een dynamische
+ en continue evoluerende omgeving.
+ Business Process Management (BPM) systemen worden hiervoor ingezet, dewelke
+ als doel hebben om de ganse business processen levenscyclus (ontwerp, configura
+tie, executie en analyse) te ondersteunen, te implementeren en te onderhouden.
+ Doch, een significant probleem in BPM benaderingen vandaag is dat moeilijk
+ de brug kan worden gemaakt tussen de organisationele context, de diverse
+ process workflow notaties, en de executable services die de procesactiviteiten
+ vervullen.
+ De moeilijkheden bij het automatiseren van de overgang tussen de verschillende
+ werelden, is te wijten aan het gebrek van semantische betekenis dewelke
+ machines vereisen voor verwerking 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SBPM1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De problematiek bij web services is dat ze niet schaalbaar zijn.
+ Huidige XML standaarden ter ondersteuning van de interoperabiliteit tussen
+ web services specificeren enkel syntactische beschrijvingen.
+ Zo beschrijft de Web Services Description Language (WSDL) wel de operaties
+ die beschikbaar zijn via een web service, maar specificeert het geen semantisch
+e betekenis van die data, noch legt het enige beperkingen op van semantische
+ aard.
+ Bijgevolg zijn mensen verplicht om deze web services te interpreteren en
+ moeten er specifieke afspraken gemaakt worden bij interactie tussen web
+ services, wat dan weer de automatisering van web service registratie, opsporing
+, onderhandeling en invocatie haast onmogelijk maakt.
+ Wanneer web services echter aangevuld worden met semantische annotaties,
+ kunnen deze door zowel machines als mensen geïnterpreteerd worden.
+ Zulke Semantische Web Services (SWS) zijn gebouwd rond een aantal universele
+ standaarden voor de uitwisseling van semantische data.
+ De ontologische basis zorgt ervoor dat services achter de schermen kunnen
+ worden geactiveerd en dat applicaties 
+\begin_inset Quotes eld
+\end_inset
+
+on-the-fly
+\begin_inset Quotes erd
+\end_inset
+
+ kunnen worden gebouwd, zonder dat mensen daar fysiek zijn bij betrokken
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SWS"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Door BPM en SWS te combineren verkrijgt men Semantic Business Process Management
+ (SBPM) systemen om de automatisering binnen de BPM levenscyclus te verbeteren.
+ Het Semantisch Web, en Semantische Web Services in het bijzonder (SWS)
+ bieden namelijk de belofte om applicaties ook op een semantisch niveau
+ te integreren.
+ Door business processen eveneens op een semantisch niveau te gaan beschouwen,
+ kunnen deze betere ondersteund worden gaande van modellering en querying
+ tot de executie en analyse.
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Onderzoeksvraag
+\end_layout
+
+\begin_layout Standard
+Uit de colleges Service-oriented architecturen (SOA) bleek zeer duidelijk
+ dat semantiek een belangrijke rol speelt.
+ Bij BPMN events wordt de semantiek bepaald door de positie, lijnstijl en
+ inhoud van het event.
+ Ook in de literatuur is het nut van semantiek bij procesanalyse zeker niet
+ onbesproken.
+ De implementatie van die semantiek (e.g.
+ de manier van annotaties toe te voegen) durft echter wel eens te verschillen.
+ In sommige gevallen worden taxonomieën gebruikt om semantische aspecten
+ te capteren, maar anderzijds worden er ook ontologieën ingezet om semantische
+ analyse te bewerkstelligen 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SBPM2,SBPM1"
+
+\end_inset
+
+.
+ Hoe die ontologieën toegepast worden om analyse te ondersteunen durft ook
+ wel eens te verschillen 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SBPM3"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+De onderzoeksvraag van mijn eindverhandeling is: 
+\emph on
+Hoe en op welke manieren kunnen Semantic Web Services worden ingezet bij
+ de automatisering van BPM systemen met het oog op een betere procesanalyse?
+\emph default
+ Dit neemt uiteraard niet weg dat de vraag nog verder verfijnd kan worden
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "onderzoek1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Methodologie
+\end_layout
+
+\begin_layout Standard
+De onderzoeksvraag zal ingevuld worden door eerst en vooral de probleemstelling
+ te formuleren en de nodige achtergrond informatie te behandelen.
+ Vervolgens wordt er een literatuuroverzicht gegeven van bestaande technieken
+ en benaderingen om BPM te ondersteunen met Semantic Web Services.
+ In eerste instantie betreft het hier dus een literatuurthesis, waarbij
+ de nodige conclusies met betrekking tot de onderzoeksvraag zullen worden
+ getrokken.
+ Desalniettemin opteer ik ervoor om ook eigen onderzoek te doen door middel
+ van systeemontwikkeling.
+ Het nut van dergelijke SBPM systemen zou aangetoond kunnen worden door
+ middel van een prototype te ontwikkelen in verschillende iteraties dat
+ de aangewezen technieken uit de literatuurstudie ondersteund.
+ Dit zou bijvoorbeeld de semantische vertaling van een BPMN model kunnen
+ zijn en de integratie van het onderliggende proces met een ander proces.
+ Daar het Semantisch Web een aantal nieuwe artefacten introduceert, wordt
+ de oplossing geëvalueerd en in het licht van 
+\emph on
+Design Research 
+\emph default
+hier omtrent ook toegelicht 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "onderzoek2,onderzoek1"
+
+\end_inset
+
+.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SBPM1"
+
+\end_inset
+
+Meersman, R.
+ & Tari, Z.
+ & Herrero, P.
+ et al.
+ 2007.
+ 
+\emph on
+An Outlook on Semantic Business Process Mining and Monitoring
+\emph default
+.
+ Springer-Verlag, LNCS 4806, blz.
+ 1244 -- 1255
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SBPM2"
+
+\end_inset
+
+Cabral, L.
+ & Norton, B.
+ & Domingue, J.
+ 2009.
+ 
+\emph on
+The Business Process Modelling Ontology
+\emph default
+.
+ Workshop: Semantic Business Process Management (SBPM2009) at ESWC 2009,
+ ACM International Conference Proceeding Series, ACM Press.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SBPM3"
+
+\end_inset
+
+Cabral, L.
+ & Norton, B.
+ & Nitzsche J.
+ 2009.
+ 
+\emph on
+Ontology-based Translation of Business Process Models
+\emph default
+.
+ The Fourth International Conference on Internet and Web Applications and
+ Services (ICIW 2009), Venice, Italy, IEEE Computer Society.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SWS"
+
+\end_inset
+
+Wikpedia.
+ 2009.
+ 
+\emph on
+Semantic Web Services.
+
+\emph default
+ Geraadpleegd op 20 december 2009 uit: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Semantic_Web_Services
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "onderzoek1"
+
+\end_inset
+
+Verelst, J.
+ & Ven, K.
+ 2009.
+
+\emph on
+ Richtlijnen voor het Verzamelen van Beleidsinformatica-geralteerde Literatuur
+ voor Masterscripties
+\emph default
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "onderzoek2"
+
+\end_inset
+
+Ven, K.
+ 2009.
+ 
+\emph on
+Kwalitatief Onderzoek in de Beleidsinformatica.
+\end_layout
+
+\end_body
+\end_document
